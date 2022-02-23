@@ -1,4 +1,3 @@
-// const GET_GREETING = '/final-capstone/rails-react-hello-world/GET_GREETING';
 export const GET_GREETING_REQUEST = "GET_GREETING_REQUEST";
 export const GET_GREETING_SUCCESS = "GET_GREETING_SUCCESS";
 
