@@ -9,28 +9,10 @@ const reducers = combineReducers({
 
 const middleWares = [thunk];
 
-const initialState = null
-
-// function rootReducer(state, action) {
-//   console.log(action.type);
-//   switch (action.type) {
-//     default:
-//       return state;
-//   }
-// }
-
 export default function configureStore() {
   const store = createStore(
     reducers,
-    // initialState,
     composeWithDevTools(applyMiddleware(...middleWares))
   );
   return store;
 }
-
-// const configureStore = createStore(
-//   reducers,
-//   composeWithDevTools(applyMiddleware(...middleWares)),
-// );
-
-// export default configureStore;

@@ -13,7 +13,6 @@ class App extends React.Component {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Greeting />} />
-            {/* <Route path="/greeting" element={<Greeting greeting={"greeting Friend "} />} /> */}
           </Routes>
         </BrowserRouter>
       </Provider>
