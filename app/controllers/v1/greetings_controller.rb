@@ -1,9 +1,17 @@
 class V1::GreetingsController < ApplicationController
+  @@greetings_list = [
+    'Good Morning Awesome Dev',
+    'Hello bro. Its nice to see you.',
+    'Afternoon Fellows, how do you do?',
+    'Hello there, how are you doing today?',
+    'Evening man, how was your day?'
+  ]
+
   def index
     Greeting.delete_all
 
-    (1..5).each do |i|
-      Greeting.create(message:"Seasons Greetings #{i}")
+    @@greetings_list.each do |i|
+      Greeting.create(message:"#{i}")
     end
 
     @message = Greeting.find(Greeting.pluck(:id).sample)
